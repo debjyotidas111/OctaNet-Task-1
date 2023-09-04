@@ -1,0 +1,343 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box;
+    font-family: consolas;
+  }
+  
+.img-container{
+    width: 80px;
+    height: 30px;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.img-container2{
+    width: 170px;
+    height: 170px;
+    padding: 20px 20px;
+}
+
+.img-container2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.img-container2:hover{
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+
+
+  #loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black no-repeat center;
+    z-index: 99999;
+  }
+  
+  header {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 20px;
+  }
+  header ul a {
+    color: white;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  nav a:hover {
+    color: aquamarine;
+  }
+  main {
+    text-align: center;
+
+  }
+  
+  .top_food {
+    margin-top: 50px;
+    color: #c6ffdd;
+  }
+  
+  .food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .food li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .food li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .heading {
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .heading h3 {
+    padding: 5px;
+  }
+  
+  .heading:hover {
+    color: black;
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  }
+  
+  #breakfast h2,
+  #lunch h2,
+  #dinner h2 {
+    margin-top: 90px;
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    color: #00203fff;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 70px;
+    padding: 10px;
+  }
+  
+  #breakfast h2:hover,
+  #lunch h2:hover,
+  #dinner h2:hover {
+    color: #6a82fb;
+  }
+  
+  #breakfast img,
+  #lunch img,
+  #dinner img {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border: 5px solid linear-gradient(to right, #8e2de2, #4a00e0);
+  }
+  
+  #breakfast img:hover,
+  #lunch img:hover,
+  #dinner img:hover {
+    background-image: linear-gradient(to right, #00b09b, #96c93d);
+  }
+  
+  #breakfast img:hover,
+  #lunch img:hover,
+  #dinner img:hover {
+    transform: translateY(10px);
+  }
+  
+  .images {
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px 10px 2px gray;
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  }
+  .images:hover {
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  }
+  
+  #breakfast {
+    margin-top: 140px;
+    user-select: none;
+  }
+  
+  #lunch {
+    margin-top: 200px;
+    user-select: none;
+  }
+  
+  #dinner {
+    margin-top: 200px;
+    user-select: none;
+  }
+  
+  .outer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+  .container .box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+  }
+  .container .box:hover {
+    transform: translateY(-20px);
+  }
+  .container .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+  }
+  .container .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    filter: blur(30px);
+  }
+  .container .box:nth-child(2)::before,
+  .container .box:nth-child(2)::after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+  }
+  .container .box:nth-child(3)::before,
+  .container .box:nth-child(3)::after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+  }
+  
+  .container .box:nth-child(5)::before,
+  .container .box:nth-child(5)::after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+  }
+  
+  .container .box:nth-child(6)::before,
+  .container .box:nth-child(6)::after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+  }
+  .container .box span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+  .container .box span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  .container .box .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+  }
+  
+  .container .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  footer{
+    color: aliceblue;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+ .images{
+    position: relative;
+ }
+
+ .images .one{
+   position: absolute;
+ top: 10px;
+ bottom: 0;
+ left: 0;
+ right: 1250px;
+ font-weight: bold;
+ color: #fbfbfb;
+ font-size: 20px;
+ cursor:grab;
+  }
+
+
+  .images .one:hover{
+    background-color:#03a9f4 ;
+    cursor:grab;
+  }
+
+  .images .three{
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 1250px;
+    right: 0;
+    font-weight: bold;
+    color: #fbfbfb;
+    font-size: 20px;
+    cursor:grab;
+  }
+
+  .images .two{
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    color: #fbfbfb;
+    font-size: 20px;
+    cursor:grab;
+  }
